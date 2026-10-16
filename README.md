@@ -4,8 +4,6 @@ A human-in-the-loop, evidence-backed pipeline for the Clipboard Health analyst a
 
 **What it does:** Crawls every paginated Bellhaven community listing *plus homepage-only promotions*, compares facilities against all CRM accounts, generates auditable ownership and cleanup proposals, enforces CHOW billing protection, and provides a Streamlit reviewer who must explicitly approve any CRM writes. A daily GitHub Actions workflow is read-only.
 
-> IMPORTANT: The live Swagger UI at `/api/docs` uses JavaScript and could not be independently parsed in this package's build environment. The default `/accounts`, `GET`, `POST`, `PATCH`, and `Authorization: Bearer` settings are **unverified assumptions**, not confirmed API facts. Before approving, check the actual docs and edit `.env` or `bellhaven/crm.py` as appropriate. The project intentionally fails rather than pretending to work if the response schema differs. Also verify the exact create/update field names, especially postal code.
-
 ## File map
 
 - `bellhaven/scrape.py`: multi-page and homepage crawl, addresses/care extraction.
